@@ -1,3 +1,12 @@
 spring:
   jpa:
     show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/f_produits
+    username: masseta
+    password: admin
+    hikari:
+      maximum-pool-size: 50
+      minimum-idle: 10
