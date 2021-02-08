@@ -1,0 +1,21 @@
+server:
+  port: 8000
+
+logging:
+  file:
+    name: server.log
+    path: .
+
+  level: warn
+  '[org.formation]': debug
+
+spring.config.activate.on-profile: prod
+
+hasard: ${random.uuid}
+
+hello:
+  greeting: 'Yop '
+  styleCase: UPPER
+  position: 1
+  style: UPPER
+
