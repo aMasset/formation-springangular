@@ -11,13 +11,13 @@ import lombok.Setter;
 @Setter
 public class Dimension {
 
-	private float hauteur,longueur,largeur;
+    private float hauteur, longueur, largeur;
 
-	@Override
-	public String toString() {
-	
-		return largeur+" x "+longueur+" x "+hauteur;
-	}
-	
-	
+    @Override
+    public String toString() {
+
+        return largeur + " x " + longueur + " x " + hauteur;
+    }
+
+
 }
