@@ -1,0 +1,16 @@
+<div [class]="style">
+  Hello {{name}}
+</div>
+
+<input type="checkbox" (change)="toggle()"/>
+<button [disabled]="btnDisabled" #button>Disabled</button>
+
+<p>{{button.disabled}}</p>
+
+<ul>
+  <li *ngFor="let p of products">{{p.reference | uppercase}}, {{p.date}}</li>
+</ul>
+
+<hr/>
+
+<input type="text" [(ngModel)]="name"/>
