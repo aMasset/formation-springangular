@@ -9,6 +9,7 @@ import java.util.Optional;
 
 public interface ProduitRepository extends JpaRepository<Produit, Long> {
 
-    List<Fournisseur> findByFournisseur(Fournisseur fournisseur);
+    List<Produit> findByFournisseur(Fournisseur fournisseur);
+
     Optional<Produit> findByReferenceAndFournisseurReference(String reference, String fournisseurReference);
 }
