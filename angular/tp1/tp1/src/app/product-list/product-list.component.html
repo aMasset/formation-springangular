@@ -7,9 +7,19 @@
 
 <p>{{button.disabled}}</p>
 
-<ul>
-  <li *ngFor="let p of products">{{p.reference | uppercase}}, {{p.date}}</li>
-</ul>
+<table>
+  <tr>
+    <th>Ref</th>
+    <th>Nom</th>
+    <th>Description</th>
+  </tr>
+
+  <tr *ngFor="let p of products">
+    <td>{{p.reference | uppercase}}</td>
+    <td>{{p.nom}}</td>
+    <td>{{p.description}}</td>
+  </tr>
+</table>
 
 <hr/>
 

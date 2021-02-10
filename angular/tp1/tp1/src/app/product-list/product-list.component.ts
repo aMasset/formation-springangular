@@ -1,4 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {ProductService} from '../service/product-service';
+import {Product} from '../model/product';
 
 @Component({
   selector: 'app-product-list',
@@ -9,14 +11,15 @@ export class ProductListComponent implements OnInit {
   name: string;
   style: string;
   btnDisabled: boolean;
-  products!: Array<any>;
+  products: Array<Product> = [];
   @Output()
   toggleEvent = new EventEmitter<boolean>();
 
-  constructor() {
+  constructor(private productService: ProductService) {
     this.name = 'Axel';
     this.style = 'hello';
     this.btnDisabled = true;
+    this.products = productService.findAll();
   }
 
   toggle(): void {
@@ -25,9 +28,6 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.products = [{reference: 'P1', date: '2021'}];
-    this.products.push({reference: 'p2', date: '2021'});
-    this.products.push({reference: 'P3', date: '2020'});
   }
 
 }
