@@ -1,0 +1,15 @@
+<div class="row col-6">
+  <table class="table table-hover">
+    <tr>
+      <th>Ref</th>
+      <th>Nom</th>
+      <th>Description</th>
+    </tr>
+
+    <tr *ngFor="let p of products">
+      <td>{{p.reference}}</td>
+      <td>{{p.nom}}</td>
+      <td>{{p.description}}</td>
+    </tr>
+  </table>
+</div>

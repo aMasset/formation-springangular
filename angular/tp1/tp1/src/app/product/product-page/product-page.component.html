@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-1">
+      <ul class="nav nav-pills nav-justified flex-column ">
+        <li class="nav-item">
+          <a [routerLink]="['new']" class="nav-link">Nouveau</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['list']" class="nav-link">Liste de produits</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-11">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
