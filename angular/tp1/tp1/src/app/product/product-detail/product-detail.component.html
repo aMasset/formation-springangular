@@ -1,1 +1,32 @@
-<p>product-detail works!</p>
+<form [formGroup]="productForm" (ngSubmit)="save()" *ngIf="productForm">
+
+  <div class="form-group row col-6">
+    <label for="reference" class="col-form-label">Référence</label>
+    <input type="text" id="reference" name="reference" formControlName="reference" class="form-control"/>
+
+    <div
+      *ngIf="productForm.get('reference')!.invalid && (productForm.get('reference')!.dirty || productForm.get('reference')!.touched)"
+      class="alert alert-danger">
+      <div *ngIf="productForm.get('reference')!.errors!.required">
+        La référence est obligatoire.
+      </div>
+      <div *ngIf="productForm.get('reference')!.errors!.maxlength">
+        La référence ne doit pas dépasser 5 caractères au maximum.
+      </div>
+    </div>
+
+    <label for="nom" class="col-form-label">Nom</label>
+    <input type="text" id="nom" name="nom" formControlName="nom" class="form-control"/>
+
+    <label for="description" class="col-form-label">Description</label>
+    <textarea id="description" name="description" formControlName="nom" class="form-control"></textarea>
+
+    <label for="prix" class="col-form-label">Prix</label>
+    <input type="text" id="prix" name="prix" formControlName="prixUnitaire" class="form-control">
+
+    <label for="availability" class="col-form-label">Availability</label>
+    <input type="text" id="availability" name="availability" formControlName="availability" class="form-control"/>
+
+    <button (click)="save()">Soumettre</button>
+  </div>
+</form>

@@ -16,6 +16,7 @@ import {ProductDetailComponent} from './product/product-detail/product-detail.co
 
 const productsRoutes: Routes = [
   {path: 'list', component: ProductListComponent},
+  {path: 'new', component: ProductDetailComponent},
   {path: ':id', component: ProductDetailComponent},
 ];
 
