@@ -3,7 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
 import {ProductListComponent} from './product/product-list/product-list.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FakeProductService} from './service/fake-product.service';
 import {ProductService} from './service/product-service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -40,7 +40,8 @@ const routes: Routes = [
     FormsModule,
     NgbModule,
     RouterModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ReactiveFormsModule
   ],
   providers: [{provide: ProductService, useClass: FakeProductService}],
   bootstrap: [AppComponent]
