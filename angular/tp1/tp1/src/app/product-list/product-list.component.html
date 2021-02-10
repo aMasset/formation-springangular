@@ -7,20 +7,22 @@
 
 <p>{{button.disabled}}</p>
 
-<table>
-  <tr>
-    <th>Ref</th>
-    <th>Nom</th>
-    <th>Description</th>
-  </tr>
+<div class="row col-6">
+  <table class="table table-hover">
+    <tr>
+      <th>Ref</th>
+      <th>Nom</th>
+      <th>Description</th>
+    </tr>
 
-  <tr *ngFor="let p of products">
-    <td>{{p.reference | uppercase}}</td>
-    <td>{{p.nom}}</td>
-    <td>{{p.description}}</td>
-  </tr>
-</table>
+    <tr *ngFor="let p of products">
+      <td>{{p.reference | uppercase}}</td>
+      <td>{{p.nom}}</td>
+      <td>{{p.description}}</td>
+    </tr>
+  </table>
 
-<hr/>
+  <hr/>
 
-<input type="text" [(ngModel)]="name"/>
+  <input type="text" class="form-control" [(ngModel)]="name"/>
+</div>
